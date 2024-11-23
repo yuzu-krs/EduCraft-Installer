@@ -116,14 +116,14 @@ def extract_zip(zip_path, extract_to):
 # キャンセルボタンの処理
 def cancel_download():
     winsound.MessageBeep(winsound.MB_ICONHAND)  # 警告音を鳴らす
-    confirm = messagebox.askyesno("EduCraft - Installer", "EduCraft セットアップを中止しますか？")
+    confirm = messagebox.askyesno("EduCraft セットアップ", "EduCraft セットアップを中止しますか？")
     if confirm:
         cancel_flag.set()  # キャンセルフラグをセット
         root.quit()  # GUIを閉じる
 
 # GUI作成
 root = tk.Tk()
-root.title("EduCraft - Installer")
+root.title("EduCraft セットアップ")
 root.geometry("800x500")  # ウィンドウのサイズを800x500に変更
 root.resizable(False, False)  # ウィンドウのリサイズを無効化
 
